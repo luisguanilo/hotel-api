@@ -21,7 +21,7 @@ VALUES
     ('01256789', 'Paola', 'Jimenez', 'Chile', 'paola.jimenez@example.com', 'password123', 'USER', '991199111', '1985-10-20', '2024-01-19', '2024-01-19'),
     ('12367890', 'Ignacio', 'Mendoza', 'Bolivia', 'ignacio.mendoza@example.com', 'password123', 'USER', '990211222', '1991-01-01', '2024-01-20', '2024-01-20');
 -- Insertar habitaciones
-INSERT INTO habitacion (numero_habitacion, tipo_habitacion, capacidad, precio_por_noche, estado_habitacion, created_at, update_at)
+INSERT INTO habitacion (numero_habitacion, tipo_habitacion, capacidad, precio_por_noche, estado_habitacion, create_at, update_at)
 VALUES
     ('101', 'Single', 1, 50.00, 'Disponible', '2024-01-01', '2024-01-01'),
     ('102', 'Double', 2, 75.00, 'Ocupado', '2024-01-02', '2024-01-02'),
