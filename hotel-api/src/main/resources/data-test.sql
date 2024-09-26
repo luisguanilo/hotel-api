@@ -21,28 +21,18 @@ VALUES
     ('01256789', 'Paola', 'Jimenez', 'Chile', 'paola.jimenez@example.com', 'password123', 'USER', '991199111', '1985-10-20', '2024-01-19', '2024-01-19'),
     ('12367890', 'Ignacio', 'Mendoza', 'Bolivia', 'ignacio.mendoza@example.com', 'password123', 'USER', '990211222', '1991-01-01', '2024-01-20', '2024-01-20');
 -- Insertar habitaciones
-INSERT INTO habitacion (numero_habitacion, tipo_habitacion, capacidad, precio_por_noche, estado_habitacion, create_at, update_at)
+INSERT INTO clientes (dni_ce, nombres, apellidos, nacionalidad, email, password, telefono, fecha_de_nacimiento, createAt, updateAt, role)
 VALUES
-    ('101', 'Single', 1, 50.00, 'Disponible', '2024-01-01', '2024-01-01'),
-    ('102', 'Double', 2, 75.00, 'Ocupado', '2024-01-02', '2024-01-02'),
-    ('103', 'Suite', 4, 150.00, 'Disponible', '2024-01-03', '2024-01-03'),
-    ('104', 'Single', 1, 55.00, 'Mantenimiento', '2024-01-04', '2024-01-04'),
-    ('105', 'Double', 2, 80.00, 'Disponible', '2024-01-05', '2024-01-05'),
-    ('106', 'Suite', 3, 120.00, 'Disponible', '2024-01-06', '2024-01-06'),
-    ('107', 'Single', 1, 60.00, 'Ocupado', '2024-01-07', '2024-01-07'),
-    ('108', 'Double', 2, 85.00, 'Mantenimiento', '2024-01-08', '2024-01-08'),
-    ('109', 'Suite', 4, 160.00, 'Disponible', '2024-01-09', '2024-01-09'),
-    ('110', 'Single', 1, 70.00, 'Disponible', '2024-01-10', '2024-01-10'),
-    ('111', 'Single', 1, 50.00, 'Disponible', '2024-01-11', '2024-01-11'),
-    ('112', 'Double', 2, 75.00, 'Ocupado', '2024-01-12', '2024-01-12'),
-    ('113', 'Suite', 4, 150.00, 'Disponible', '2024-01-13', '2024-01-13'),
-    ('114', 'Single', 1, 55.00, 'Mantenimiento', '2024-01-14', '2024-01-14'),
-    ('115', 'Double', 2, 80.00, 'Disponible', '2024-01-15', '2024-01-15'),
-    ('116', 'Suite', 3, 120.00, 'Disponible', '2024-01-16', '2024-01-16'),
-    ('117', 'Single', 1, 60.00, 'Ocupado', '2024-01-17', '2024-01-17'),
-    ('118', 'Double', 2, 85.00, 'Mantenimiento', '2024-01-18', '2024-01-18'),
-    ('119', 'Suite', 4, 160.00, 'Disponible', '2024-01-19', '2024-01-19'),
-    ('120', 'Single', 1, 70.00, 'Disponible', '2024-01-20', '2024-01-20');
+                                                                            ('12345678', 'Juan', 'Pérez', 'Peruano', 'juan.perez@example.com', 'password123', '987654321', '1985-05-15', NOW(), NULL, 'USER'),
+                                                                            ('87654321', 'María', 'Gómez', 'Colombiana', 'maria.gomez@example.com', 'password123', '912345678', '1990-07-22', NOW(), NULL, 'ADMIN'),
+                                                                            ('11223344', 'Carlos', 'López', 'Mexicano', 'carlos.lopez@example.com', 'password123', '978654321', '1988-03-10', NOW(), NULL, 'USER'),
+                                                                            ('44332211', 'Ana', 'Torres', 'Argentina', 'ana.torres@example.com', 'password123', '934567890', '1992-11-30', NOW(), NULL, 'USER'),
+                                                                            ('55667788', 'Sofía', 'Martínez', 'Chilena', 'sofia.martinez@example.com', 'password123', '921234567', '1995-02-14', NOW(), NULL, 'ADMIN'),
+                                                                            ('99887766', 'Pedro', 'Ramírez', 'Uruguayo', 'pedro.ramirez@example.com', 'password123', '918273645', '1983-09-25', NOW(), NULL, 'USER'),
+                                                                            ('66554433', 'Laura', 'Fernández', 'Ecuatoriana', 'laura.fernandez@example.com', 'password123', '925364718', '1989-01-05', NOW(), NULL, 'USER'),
+                                                                            ('33445566', 'Jorge', 'Hernández', 'Paraguayo', 'jorge.hernandez@example.com', 'password123', '931247856', '1991-06-18', NOW(), NULL, 'ADMIN'),
+                                                                            ('77889900', 'Lucía', 'Suárez', 'Boliviana', 'lucia.suarez@example.com', 'password123', '946278345', '1993-04-27', NOW(), NULL, 'USER'),
+                                                                            ('99001122', 'Mateo', 'Castro', 'Peruano', 'mateo.castro@example.com', 'password123', '956789432', '1986-12-03', NOW(), NULL, 'USER');
 -- Insertar servicios
 INSERT INTO servicio (nombre_servicio, descripcion, precio, create_at, update_at)
 VALUES
