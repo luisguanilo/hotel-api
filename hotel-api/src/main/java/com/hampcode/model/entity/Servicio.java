@@ -14,19 +14,19 @@ public class Servicio {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    @Column(name="Nombre_Servicio",nullable = false,length = 50)
+    @Column(name="nombre_servicio",nullable = false,length = 50)
     private String nombre;
 
-    @Column(name="Descripcion",columnDefinition = "TEXT")
+    @Column(name="descripcion",columnDefinition = "TEXT")
     private String descripcion;
 
-    @Column(name="Precio",nullable = false)
+    @Column(name="precio",nullable = false)
     private float precio;
 
-    @Column(name="Create_At",nullable = false)
+    @Column(name="create_at",nullable = false)
     private LocalDateTime createat;
 
-    @Column(name="Update_At")
+    @Column(name="update_at")
     private LocalDateTime updateat;
 
 

@@ -9,7 +9,7 @@ import java.util.Date;
 
 @Data
 @Entity
-@Table(name="Cliente")
+@Table(name="cliente")
 
 
 public class Cliente {
@@ -17,41 +17,41 @@ public class Cliente {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    @Column(name="Dni_ce",nullable = false,length = 8)
+    @Column(name="dni_ce",nullable = false,length = 8)
     private String dni_ce;
 
-    @Column(name="Nombres",nullable = false,length = 50)
+    @Column(name="nombres",nullable = false,length = 50)
     private String nombres;
 
-    @Column(name="Apellidos",nullable = false,length = 50)
+    @Column(name="apellidos",nullable = false,length = 50)
     private String apellidos;
 
-    @Column(name="Nacionalidad",nullable = false,length = 50)
+    @Column(name="nacionalidad",nullable = false,length = 50)
     private String nacionalidad;
 
     @Column(name="email",nullable = false,length = 50)
     private String email;
 
-    @Column(name="Password",nullable = true,length = 20)
+    @Column(name="password",nullable = true,length = 20)
     private String password;
 
 
-    @Column(name="Telefono",nullable = false,length = 20)
+    @Column(name="telefono",nullable = false,length = 20)
     private String telefono;
 
-    @Column(name="Fecha_de_Nacimiento",nullable = false)
-    private Date fecha_de_nacimiento;
+    @Column(name="fecha_de_nacimiento",nullable = false)
+    private LocalDateTime fecha_de_nacimiento;
 
-    @Column(name="Created_At",nullable = false)
-    private LocalDateTime createAt;
+    @Column(name="created_at",nullable = false)
+    private LocalDateTime create_t;
 
     @Column(name="Update_At")
-    private LocalDateTime updateAt;
+    private LocalDateTime update_at;
 
 
 
     @Enumerated(EnumType.STRING)
-    @Column(name="Role")
+    @Column(name="role")
     private Role role;
     ;
 

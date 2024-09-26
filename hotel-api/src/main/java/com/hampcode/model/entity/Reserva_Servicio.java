@@ -7,7 +7,7 @@ import java.time.LocalDateTime;
 
 @Data
 @Entity
-@Table(name="Reserva_Servicio")
+@Table(name="reserva_servicio")
 @IdClass(ReservaServicioPK.class)
 public class Reserva_Servicio {
 

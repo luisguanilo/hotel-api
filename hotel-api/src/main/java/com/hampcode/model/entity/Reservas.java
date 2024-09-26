@@ -11,25 +11,25 @@ import java.util.List;
 
 @Data
 @Entity
-@Table(name="Reservas")
+@Table(name="reservas")
 
 public class Reservas {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    @Column(name="Fecha_Inicio")
+    @Column(name="fecha_inicio")
     private LocalDateTime fecha_inicio;
 
-    @Column(name="Fecha_Fin")
+    @Column(name="fecha_fin")
     private LocalDateTime fecha_fin;
 
     @Enumerated(EnumType.STRING)
-    @Column(name="Estado_Reserva")
+    @Column(name="estado_reserva")
     private EstadoReserva estadoReserva;
 
     @ManyToOne
-    @JoinColumn(name="Cliente_Id",referencedColumnName ="id",
+    @JoinColumn(name="cliente_id",referencedColumnName ="id",
     foreignKey =@ForeignKey(name="FK_reserva_cliente"))
     private Cliente cliente;
 
