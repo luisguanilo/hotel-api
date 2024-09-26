@@ -7,26 +7,26 @@ import java.time.LocalDateTime;
 
 @Data
 @Entity
-@Table(name="servicio")
+@Table(name="servicios")
 
 public class Servicio {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    @Column(name="Nombre_Servicio",nullable = false,length = 50)
+    @Column(name="nombre",nullable = false,length = 50)
     private String nombre;
 
-    @Column(name="Descripcion",columnDefinition = "TEXT")
+    @Column(name="descripcion",columnDefinition = "TEXT")
     private String descripcion;
 
-    @Column(name="Precio",nullable = false)
+    @Column(name="precio",nullable = false)
     private float precio;
 
-    @Column(name="Create_At",nullable = false)
-    private LocalDateTime createat;
+    @Column(name="created_at",nullable = false)
+    private LocalDateTime createdat;
 
-    @Column(name="Update_At")
+    @Column(name="update_at")
     private LocalDateTime updateat;
 
 

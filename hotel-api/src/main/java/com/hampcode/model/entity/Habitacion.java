@@ -10,31 +10,31 @@ import java.time.LocalDateTime;
 
 @Data
 @Entity
-@Table(name="Habitacion")
+@Table(name="habitacion")
 
 public class Habitacion {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    @Column(name="Numero_habitacion",nullable = false,length = 4)
-    private String numero_habitacion;
+    @Column(name="numero_habitacion",nullable = false,length = 4)
+    private String numerohabitacion;
 
 
 
-    @Column(name="Capacidad",nullable = false)
+    @Column(name="capacidad",nullable = false)
     private Integer capacidad;
 
-    @Column(name="Precio_por_noche",nullable = false)
-    private float precio_por_noche;
+    @Column(name="precio_por_noche",nullable = false)
+    private float preciopornoche;
 
 
 
-    @Column(name="Created_At")
-    private LocalDateTime created_at;
+    @Column(name="created_at")
+    private LocalDateTime createdAt;
 
-    @Column(name="Update_At")
-    private LocalDateTime update_at;
+    @Column(name="update_at")
+    private LocalDateTime updateAt;
 
     @ManyToOne
     @JoinColumn(name="servicio_id",referencedColumnName = "id")
@@ -42,7 +42,7 @@ public class Habitacion {
 
     @ManyToOne
     @JoinColumn(name="reserva_id",referencedColumnName = "id")
-    private Reservas reserva;
+    private Reserva reserva;
 
 
     @Enumerated(EnumType.STRING)
