@@ -9,16 +9,14 @@ import java.util.Date;
 
 @Data
 @Entity
-@Table(name="cliente")
-
-
+@Table(name="clientes")
 public class Cliente {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    @Column(name="dni_ce",nullable = false,length = 8)
-    private String dni_ce;
+    @Column(name="dni_ce",nullable = false,length = 20)
+    private String dniCe;
 
     @Column(name="nombres",nullable = false,length = 50)
     private String nombres;
@@ -29,31 +27,26 @@ public class Cliente {
     @Column(name="nacionalidad",nullable = false,length = 50)
     private String nacionalidad;
 
-    @Column(name="email",nullable = false,length = 50)
+    @Column(name="email" ,unique = true,nullable = false,length = 50)
     private String email;
 
-    @Column(name="password",nullable = true,length = 20)
+    @Column(name="password",nullable = false,length = 20)
     private String password;
-
 
     @Column(name="telefono",nullable = false,length = 20)
     private String telefono;
 
     @Column(name="fecha_de_nacimiento",nullable = false)
-    private LocalDateTime fecha_de_nacimiento;
+    private Date fecha_de_nacimiento;
 
     @Column(name="created_at",nullable = false)
-    private LocalDateTime create_t;
+    private LocalDateTime createAt;
 
-    @Column(name="Update_At")
-    private LocalDateTime update_at;
-
-
+    @Column(name="update_at")
+    private LocalDateTime updateAt;
 
     @Enumerated(EnumType.STRING)
     @Column(name="role")
     private Role role;
-    ;
-
 
 }
