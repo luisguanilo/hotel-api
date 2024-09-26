@@ -22,6 +22,31 @@ VALUES
     (18,'90145678', 'Rodrigo', 'Mejia', 'Ecuador', 'rodrigo.mejia@example.com', 'password123', 'USER', '992188999', '1992-07-13', '2024-01-18', '2024-01-18'),
     (19,'01256789', 'Paola', 'Jimenez', 'Chile', 'paola.jimenez@example.com', 'password123', 'USER', '991199111', '1985-10-20', '2024-01-19', '2024-01-19'),
     (20,'12367890', 'Ignacio', 'Mendoza', 'Bolivia', 'ignacio.mendoza@example.com', 'password123', 'USER', '990211222', '1991-01-01', '2024-01-20', '2024-01-20');
+
+-- Insertar servicios
+INSERT INTO servicio (id, nombre_servicio, descripcion, precio, create_at, update_at)
+VALUES (1, 'Wi-Fi', 'Internet de alta velocidad', 10.00, '2024-01-01', '2024-01-01'),
+       (2, 'Desayuno', 'Desayuno buffet', 20.00, '2024-01-02', '2024-01-02'),
+       (3, 'Spa', 'Acceso al spa del hotel', 50.00, '2024-01-03', '2024-01-03'),
+       (4, 'Gimnasio', 'Acceso al gimnasio', 15.00, '2024-01-04', '2024-01-04'),
+       (5, 'Transporte', 'Transporte al aeropuerto', 30.00, '2024-01-05', '2024-01-05'),
+       (6, 'Lavandería', 'Servicio de lavandería', 25.00, '2024-01-06', '2024-01-06'),
+       (7, 'Piscina', 'Acceso a la piscina', 20.00, '2024-01-07', '2024-01-07'),
+       (8, 'Estacionamiento', 'Espacio de estacionamiento', 15.00, '2024-01-08', '2024-01-08'),
+       (9, 'Almuerzo', 'Servicio de almuerzo', 35.00, '2024-01-09', '2024-01-09'),
+       (10, 'Cena', 'Servicio de cena', 40.00, '2024-01-10', '2024-01-10'),
+       (11, 'Wi-Fi Premium', 'Internet ultra rápido', 20.00, '2024-01-11', '2024-01-11'),
+       (12, 'Excursiones', 'Tour guiado por la ciudad', 60.00, '2024-01-12', '2024-01-12'),
+       (13, 'Bar', 'Acceso al bar del hotel', 30.00, '2024-01-13', '2024-01-13'),
+       (14, 'Talleres', 'Talleres recreativos', 45.00, '2024-01-14', '2024-01-14'),
+       (15, 'Sauna', 'Acceso al sauna', 25.00, '2024-01-15', '2024-01-15'),
+       (16, 'Clases de Yoga', 'Clases de yoga matutinas', 30.00, '2024-01-16', '2024-01-16'),
+       (17, 'Masajes', 'Servicio de masajes relajantes', 70.00, '2024-01-17', '2024-01-17'),
+       (18, 'Conserjería', 'Servicio de conserjería', 15.00, '2024-01-18', '2024-01-18'),
+       (19, 'Mini Bar', 'Acceso al mini bar de la habitación', 50.00, '2024-01-19', '2024-01-19'),
+       (20, 'Clases de Tenis', 'Clases de tenis', 40.00, '2024-01-20', '2024-01-20');
+
+
 -- Insertar habitaciones
 INSERT INTO habitacion (id,numero_habitacion, tipo_habitacion, capacidad, precio_por_noche, estado_habitacion, create_at, update_at)
 VALUES
@@ -45,29 +70,8 @@ VALUES
     (18,'118', 'Double', 2, 85.00, 'Mantenimiento', '2024-01-18', '2024-01-18'),
     (19,'119', 'Suite', 4, 160.00, 'Disponible', '2024-01-19', '2024-01-19'),
     (20,'120', 'Single', 1, 70.00, 'Disponible', '2024-01-20', '2024-01-20');
--- Insertar servicios
-INSERT INTO servicio (id,nombre_servicio, descripcion, precio, create_at, update_at)
-VALUES
-    (1,'Wi-Fi', 'Internet de alta velocidad', 10.00, '2024-01-01', '2024-01-01'),
-    (2,'Desayuno', 'Desayuno buffet', 20.00, '2024-01-02', '2024-01-02'),
-    (3,'Spa', 'Acceso al spa del hotel', 50.00, '2024-01-03', '2024-01-03'),
-    (4,'Gimnasio', 'Acceso al gimnasio', 15.00, '2024-01-04', '2024-01-04'),
-    (5,'Transporte', 'Transporte al aeropuerto', 30.00, '2024-01-05', '2024-01-05'),
-    (6,'Lavandería', 'Servicio de lavandería', 25.00, '2024-01-06', '2024-01-06'),
-    (7,'Piscina', 'Acceso a la piscina', 20.00, '2024-01-07', '2024-01-07'),
-    (8,'Estacionamiento', 'Espacio de estacionamiento', 15.00, '2024-01-08', '2024-01-08'),
-    (9,'Almuerzo', 'Servicio de almuerzo', 35.00, '2024-01-09', '2024-01-09'),
-    (10,'Cena', 'Servicio de cena', 40.00, '2024-01-10', '2024-01-10'),
-    (11,'Wi-Fi Premium', 'Internet ultra rápido', 20.00, '2024-01-11', '2024-01-11'),
-    (12,'Excursiones', 'Tour guiado por la ciudad', 60.00, '2024-01-12', '2024-01-12'),
-    (13,'Bar', 'Acceso al bar del hotel', 30.00, '2024-01-13', '2024-01-13'),
-    (14,'Talleres', 'Talleres recreativos', 45.00, '2024-01-14', '2024-01-14'),
-    (15,'Sauna', 'Acceso al sauna', 25.00, '2024-01-15', '2024-01-15'),
-    (16,'Clases de Yoga', 'Clases de yoga matutinas', 30.00, '2024-01-16', '2024-01-16'),
-    (17,'Masajes', 'Servicio de masajes relajantes', 70.00, '2024-01-17', '2024-01-17'),
-    (18,'Conserjería', 'Servicio de conserjería', 15.00, '2024-01-18', '2024-01-18'),
-    (19,'Mini Bar', 'Acceso al mini bar de la habitación', 50.00, '2024-01-19', '2024-01-19'),
-    (20,'Clases de Tenis', 'Clases de tenis', 40.00, '2024-01-20', '2024-01-20');
+
+
 -- Insertar reservas
 INSERT INTO reservas (id,fecha_inicio, fecha_fin, estado_reserva, cliente_id, habitacion_id)
 VALUES

@@ -40,7 +40,7 @@ public class ClienteServicioImpl implements ClienteServicio {
     @Override
     @Transactional
     public Cliente create(Cliente cliente) {
-        cliente.setCreateAt(LocalDateTime.now());
+        cliente.setCreated_at(LocalDateTime.now());
         return clienteRepository.save(cliente);
     }
 
@@ -48,11 +48,11 @@ public class ClienteServicioImpl implements ClienteServicio {
     @Transactional
     public Cliente update(Integer id, Cliente updateCliente) {
         Cliente clienteFromDB = findById(id);
-        clienteFromDB.setNombres(updateCliente.getNombres());
-        clienteFromDB.setApellidos(updateCliente.getApellidos());
+        clienteFromDB.setNombre(updateCliente.getNombre());
+        clienteFromDB.setApellido(updateCliente.getApellido());
         clienteFromDB.setEmail(updateCliente.getEmail());
         clienteFromDB.setTelefono(updateCliente.getTelefono());
-        clienteFromDB.setUpdateAt(LocalDateTime.now());
+        clienteFromDB.setUpdate_at(LocalDateTime.now());
 
         return clienteRepository.save(clienteFromDB);
     }
