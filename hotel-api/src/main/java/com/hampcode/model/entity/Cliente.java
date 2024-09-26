@@ -17,7 +17,7 @@ public class Cliente {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    @Column(name="dni_ce",nullable = false,length = 8)
+    @Column(name = "dni_ce", nullable = false, length = 20)
     private String dni_ce;
 
     @Column(name="nombres",nullable = false,length = 50)
