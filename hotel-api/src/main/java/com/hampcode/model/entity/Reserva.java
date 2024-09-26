@@ -24,6 +24,7 @@ public class Reserva {
     @Column(name="fecha_fin")
     private LocalDateTime fechafin;
 
+
     @Enumerated(EnumType.STRING)
     @Column(name="estado_reserva")
     private EstadoReserva estadoReserva;

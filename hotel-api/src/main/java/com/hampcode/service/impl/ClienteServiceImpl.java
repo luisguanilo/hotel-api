@@ -1,8 +1,9 @@
 package com.hampcode.service.impl;
+
+import com.hampcode.service.ClienteServicio;
 import org.springframework.transaction.annotation.Transactional;
 import com.hampcode.model.entity.Cliente;
 import com.hampcode.repository.ClienteRepository;
-import com.hampcode.service.ClienteServicio;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -11,11 +12,9 @@ import org.springframework.stereotype.Service;
 import java.time.LocalDateTime;
 import java.util.List;
 
-import static org.springframework.data.jpa.domain.AbstractPersistable_.id;
-
 @RequiredArgsConstructor
 @Service
-public class ClienteServicioImpl implements ClienteServicio {
+public class ClienteServiceImpl implements ClienteServicio {
     private final ClienteRepository clienteRepository;
 
     @Override
@@ -40,7 +39,7 @@ public class ClienteServicioImpl implements ClienteServicio {
     @Override
     @Transactional
     public Cliente create(Cliente cliente) {
-        cliente.setCreateAt(LocalDateTime.now());
+        cliente.setCreated_at(LocalDateTime.now());
         return clienteRepository.save(cliente);
     }
 
@@ -48,11 +47,11 @@ public class ClienteServicioImpl implements ClienteServicio {
     @Transactional
     public Cliente update(Integer id, Cliente updateCliente) {
         Cliente clienteFromDB = findById(id);
-        clienteFromDB.setNombres(updateCliente.getNombres());
-        clienteFromDB.setApellidos(updateCliente.getApellidos());
+        clienteFromDB.setNombre(updateCliente.getNombre());
+        clienteFromDB.setApellido(updateCliente.getApellido());
         clienteFromDB.setEmail(updateCliente.getEmail());
         clienteFromDB.setTelefono(updateCliente.getTelefono());
-        clienteFromDB.setUpdateAt(LocalDateTime.now());
+        clienteFromDB.setUpdate_at(LocalDateTime.now());
 
         return clienteRepository.save(clienteFromDB);
     }
