@@ -21,28 +21,20 @@ VALUES
     ('01256789', 'Paola', 'Jimenez', 'Chile', 'paola.jimenez@example.com', 'password123', 'USER', '991199111', '1985-10-20', '2024-01-19', '2024-01-19'),
     ('12367890', 'Ignacio', 'Mendoza', 'Bolivia', 'ignacio.mendoza@example.com', 'password123', 'USER', '990211222', '1991-01-01', '2024-01-20', '2024-01-20');
 -- Insertar habitacion
-INSERT INTO habitacion (numero_habitacion, tipo_habitacion, capacidad, precio_por_noche, estado_habitacion, create_at, update_at)
+INSERT INTO habitaciones
+(numero_habitacion, capacidad, precio_por_noche, created_at, update_at, estado_habitacion, tipo_habitacion, servicio_id, reserva_id)
 VALUES
-    ('101', 'Single', 1, 50.00, 'Disponible', '2024-01-01', '2024-01-01'),
-    ('102', 'Double', 2, 75.00, 'Ocupado', '2024-01-02', '2024-01-02'),
-    ('103', 'Suite', 4, 150.00, 'Disponible', '2024-01-03', '2024-01-03'),
-    ('104', 'Single', 1, 55.00, 'Mantenimiento', '2024-01-04', '2024-01-04'),
-    ('105', 'Double', 2, 80.00, 'Disponible', '2024-01-05', '2024-01-05'),
-    ('106', 'Suite', 3, 120.00, 'Disponible', '2024-01-06', '2024-01-06'),
-    ('107', 'Single', 1, 60.00, 'Ocupado', '2024-01-07', '2024-01-07'),
-    ('108', 'Double', 2, 85.00, 'Mantenimiento', '2024-01-08', '2024-01-08'),
-    ('109', 'Suite', 4, 160.00, 'Disponible', '2024-01-09', '2024-01-09'),
-    ('110', 'Single', 1, 70.00, 'Disponible', '2024-01-10', '2024-01-10'),
-    ('111', 'Single', 1, 50.00, 'Disponible', '2024-01-11', '2024-01-11'),
-    ('112', 'Double', 2, 75.00, 'Ocupado', '2024-01-12', '2024-01-12'),
-    ('113', 'Suite', 4, 150.00, 'Disponible', '2024-01-13', '2024-01-13'),
-    ('114', 'Single', 1, 55.00, 'Mantenimiento', '2024-01-14', '2024-01-14'),
-    ('115', 'Double', 2, 80.00, 'Disponible', '2024-01-15', '2024-01-15'),
-    ('116', 'Suite', 3, 120.00, 'Disponible', '2024-01-16', '2024-01-16'),
-    ('117', 'Single', 1, 60.00, 'Ocupado', '2024-01-17', '2024-01-17'),
-    ('118', 'Double', 2, 85.00, 'Mantenimiento', '2024-01-18', '2024-01-18'),
-    ('119', 'Suite', 4, 160.00, 'Disponible', '2024-01-19', '2024-01-19'),
-    ('120', 'Single', 1, 70.00, 'Disponible', '2024-01-20', '2024-01-20');
+            ('1001', 2, 100.50, '2024-09-01 14:00:00', '2024-09-01 14:00:00', 'DISPONIBLE', 'SIMPLE', 1, 1),
+            ('1002', 3, 150.00, '2024-09-01 15:30:00', '2024-09-01 15:30:00', 'OCUPADA', 'DOBLE', 2, 2),
+            ('1003', 4, 200.75, '2024-09-02 10:00:00', '2024-09-02 10:00:00', 'RESERVADA', 'TRIPLE', 1, 3),
+            ('1004', 2, 120.00, '2024-09-03 11:00:00', '2024-09-03 11:00:00', 'DISPONIBLE', 'SIMPLE', 3, 4),
+            ('1005', 3, 180.00, '2024-09-04 12:00:00', '2024-09-04 12:00:00', 'OCUPADA', 'DOBLE', 2, 5),
+            ('1006', 4, 250.25, '2024-09-05 09:30:00', '2024-09-05 09:30:00', 'RESERVADA', 'TRIPLE', 4, 6),
+            ('1007', 1, 90.00, '2024-09-06 14:00:00', '2024-09-06 14:00:00', 'DISPONIBLE', 'SIMPLE', 1, 7),
+            ('1008', 3, 175.00, '2024-09-07 10:45:00', '2024-09-07 10:45:00', 'OCUPADA', 'DOBLE', 3, 8),
+            ('1009', 4, 210.50, '2024-09-08 08:30:00', '2024-09-08 08:30:00', 'RESERVADA', 'TRIPLE', 4, 9),
+            ('1010', 2, 130.75, '2024-09-09 17:15:00', '2024-09-09 17:15:00', 'DISPONIBLE', 'SIMPLE', 2, 10);
+
 -- Insertar servicios
 INSERT INTO servicio (nombre_servicio, descripcion, precio, create_at, update_at)
 VALUES

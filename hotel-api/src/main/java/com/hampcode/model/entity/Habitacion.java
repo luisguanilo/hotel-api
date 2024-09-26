@@ -1,6 +1,4 @@
 package com.hampcode.model.entity;
-
-
 import com.hampcode.model.enums.EstadoHabitacion;
 import com.hampcode.model.enums.TipoHabitacion;
 import jakarta.persistence.*;
@@ -10,7 +8,7 @@ import java.time.LocalDateTime;
 
 @Data
 @Entity
-@Table(name="habitacion")
+@Table(name="habitaciones")
 
 public class Habitacion {
     @Id
@@ -18,23 +16,28 @@ public class Habitacion {
     private Integer id;
 
     @Column(name="numero_habitacion",nullable = false,length = 4)
-    private String numero_habitacion;
-
-
+    private String numeroHabitacion;
 
     @Column(name="capacidad",nullable = false)
     private Integer capacidad;
 
     @Column(name="precio_por_noche",nullable = false)
-    private float precio_por_noche;
+    private float precioPorNoche;
 
-
-
-    @Column(name="Created_at")
-    private LocalDateTime create_at;
+    @Column(name="created_at")
+    private LocalDateTime createdAt;
 
     @Column(name="update_at")
-    private LocalDateTime update_at;
+    private LocalDateTime updateAt;
+
+    @Enumerated(EnumType.STRING)
+    @Column(name="estado_habitacion")
+    private EstadoHabitacion estadoHabitacion;
+
+    @Enumerated(EnumType.STRING)
+    @Column(name="tipo_habitacion")
+    private TipoHabitacion tipoHabitacion;
+
 
     @ManyToOne
     @JoinColumn(name="servicio_id",referencedColumnName = "id")
@@ -43,15 +46,4 @@ public class Habitacion {
     @ManyToOne
     @JoinColumn(name="reserva_id",referencedColumnName = "id")
     private Reservas reservas;
-
-
-    @Enumerated(EnumType.STRING)
-    @Column(name="estado_habitacion")
-    private EstadoHabitacion estado_habitacion;
-
-    @Enumerated(EnumType.STRING)
-    @Column(name="tipo_habitacion")
-    private TipoHabitacion tipo_habitacion;
-
-
 }
