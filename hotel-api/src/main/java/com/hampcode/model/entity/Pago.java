@@ -24,7 +24,6 @@ public class Pago {
     private String metodo_pago;
 
 
-
     @ManyToOne
     @JoinColumn(name="reserva_id",referencedColumnName = "id"
     ,foreignKey = @ForeignKey(name="Fk_pago_reserva"))
