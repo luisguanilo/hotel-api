@@ -42,7 +42,7 @@ public class Habitacion {
 
     @ManyToOne
     @JoinColumn(name="reserva_id",referencedColumnName = "id")
-    private Reservas reservas;
+    private Reserva reservas;
 
 
     @Enumerated(EnumType.STRING)

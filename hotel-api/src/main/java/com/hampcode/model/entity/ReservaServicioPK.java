@@ -17,7 +17,7 @@ public class ReservaServicioPK implements Serializable {
     @JoinColumn(name = "reserva_id", referencedColumnName = "id"
             , foreignKey = @ForeignKey(name = "fk_Servicios_reservas"))
 
-    private Reservas reserva;
+    private Reserva reserva;
 
 
     @ManyToOne

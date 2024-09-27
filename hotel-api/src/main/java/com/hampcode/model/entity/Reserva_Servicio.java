@@ -14,7 +14,7 @@ public class Reserva_Servicio {
     @Id
     @ManyToOne
     @JoinColumn(name = "id_reserva", referencedColumnName = "id", foreignKey = @ForeignKey(name = "FK_reserva_servicio_reserva"))
-    private Reservas reserva;
+    private Reserva reserva;
 
     @Id
     @ManyToOne
