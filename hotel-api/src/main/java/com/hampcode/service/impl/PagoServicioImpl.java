@@ -33,7 +33,7 @@ public class PagoServicioImpl implements PagoServicio {
     @Override
     @Transactional(readOnly = true)
     public Pago findById(Integer id) {
-        return PagoRepository.findById(id)
+        return pagoRepository.findById(id)
                 .orElseThrow(()->new RuntimeException("No existe el pago Id: " + id));
     }
 
