@@ -89,29 +89,21 @@ VALUES
     ('2024-04-26', '2024-04-30', 'Pendiente', 18, 18),
     ('2024-05-01', '2024-05-05', 'Confirmada', 19, 19),
     ('2024-05-06', '2024-05-10', 'Pendiente', 20, 20);
--- Insertar pagos
-INSERT INTO pago (fecha_pago, monto, metodo_de_pago, reserva_id)
+--
+-- Insertar 10 registros en la tabla pagos
+INSERT INTO pagos (fecha_pago, monto, metodo_de_pago, estado_pago, created_at, updated_at, reserva_id)
 VALUES
-    ('2024-02-02', 250.00, 'Tarjeta de Crédito', 1),
-    ('2024-02-07', 375.00, 'Efectivo', 2),
-    ('2024-02-12', 150.00, 'Transferencia Bancaria', 3),
-    ('2024-02-17', 600.00, 'Tarjeta de Débito', 4),
-    ('2024-02-22', 400.00, 'Tarjeta de Crédito', 5),
-    ('2024-02-27', 450.00, 'Efectivo', 6),
-    ('2024-03-03', 300.00, 'Transferencia Bancaria', 7),
-    ('2024-03-08', 500.00, 'Tarjeta de Débito', 8),
-    ('2024-03-13', 200.00, 'Tarjeta de Crédito', 9),
-    ('2024-03-18', 350.00, 'Efectivo', 10),
-    ('2024-03-23', 250.00, 'Transferencia Bancaria', 11),
-    ('2024-03-28', 375.00, 'Tarjeta de Débito', 12),
-    ('2024-04-02', 150.00, 'Tarjeta de Crédito', 13),
-    ('2024-04-07', 600.00, 'Efectivo', 14),
-    ('2024-04-12', 400.00, 'Transferencia Bancaria', 15),
-    ('2024-04-17', 450.00, 'Tarjeta de Débito', 16),
-    ('2024-04-22', 300.00, 'Tarjeta de Crédito', 17),
-    ('2024-04-27', 500.00, 'Efectivo', 18),
-    ('2024-05-02', 200.00, 'Transferencia Bancaria', 19),
-    ('2024-05-07', 350.00, 'Tarjeta de Débito', 20);
+    ('2024-09-01 10:00:00', 150.00, 'Tarjeta de Crédito', 'COMPLETED', '2024-08-31 09:00:00', '2024-09-01 10:00:00', 1),
+    ('2024-09-02 11:30:00', 200.00, 'Transferencia Bancaria', 'PENDING', '2024-09-01 10:30:00', '2024-09-02 11:30:00', 2),
+    ('2024-09-03 14:00:00', 120.00, 'PayPal', 'FAILED', '2024-09-02 13:00:00', '2024-09-03 14:00:00', 3),
+    ('2024-09-04 09:45:00', 180.00, 'Tarjeta de Débito', 'COMPLETED', '2024-09-03 08:45:00', '2024-09-04 09:45:00', 4),
+    ('2024-09-05 12:20:00', 300.00, 'Efectivo', 'COMPLETED', '2024-09-04 11:20:00', '2024-09-05 12:20:00', 5),
+    ('2024-09-06 15:10:00', 400.00, 'Transferencia Bancaria', 'PENDING', '2024-09-05 14:10:00', '2024-09-06 15:10:00', 6),
+    ('2024-09-07 16:30:00', 250.00, 'Tarjeta de Crédito', 'COMPLETED', '2024-09-06 15:30:00', '2024-09-07 16:30:00', 7),
+    ('2024-09-08 13:15:00', 275.00, 'PayPal', 'COMPLETED', '2024-09-07 12:15:00', '2024-09-08 13:15:00', 8),
+    ('2024-09-09 18:00:00', 500.00, 'Tarjeta de Crédito', 'FAILED', '2024-09-08 17:00:00', '2024-09-09 18:00:00', 9),
+    ('2024-09-10 19:45:00', 350.00, 'Efectivo', 'COMPLETED', '2024-09-09 18:45:00', '2024-09-10 19:45:00', 10);
+
 
 -- Insertar reserva_servicio (reservas con servicios adicionales)
 INSERT INTO reserva_servicio (id_reserva, id_servicio, added_date)
